@@ -141,5 +141,5 @@
 
 ### <img src="https://user-images.githubusercontent.com/93325839/154862600-5b1a419e-2a5d-407a-ad46-440ff0fb30de.png"  height="30"/> Видео прохождения тестов в Selenoid  
 
-https://user-images.githubusercontent.com/93325839/154869810-73991890-49b9-4c75-b8d7-7aa1bd013469.mp4  
+https://user-images.githubusercontent.com/93325839/155041937-c17ef424-1c9f-47d2-a30c-b212bc750e71.mp4
 
