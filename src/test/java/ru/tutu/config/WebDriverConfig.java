@@ -1,4 +1,4 @@
-package config;
+package ru.tutu.config;
 
 import com.codeborne.selenide.Configuration;
 import org.aeonbits.owner.ConfigFactory;
@@ -7,19 +7,17 @@ import org.openqa.selenium.remote.DesiredCapabilities;
 
 import static java.lang.String.format;
 
-public class WebDriverProvider {
+public class WebDriverConfig {
 
     private final static ProjectConfig webConfig = ConfigFactory.create(ProjectConfig.class, System.getProperties());
 
     public static void webConfiguration() {
-
         Configuration.browser = webConfig.browser();
         Configuration.browserVersion = webConfig.versionBrowser();
         Configuration.browserSize = webConfig.browserSize();
 
         DesiredCapabilities capabilities = new DesiredCapabilities();
         ChromeOptions chromeOptions = new ChromeOptions();
-
         chromeOptions.addArguments("--no-sandbox");
         chromeOptions.addArguments("--enable-automation");
         chromeOptions.addArguments("--disable-popup-blocking");
@@ -33,8 +31,7 @@ public class WebDriverProvider {
             capabilities.setCapability("enableVNC", true);
             capabilities.setCapability("enableVideo", true);
         }
-
         Configuration.browserCapabilities = capabilities;
-
     }
 }
+

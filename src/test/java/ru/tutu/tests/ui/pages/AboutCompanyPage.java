@@ -1,13 +1,21 @@
 package ru.tutu.tests.ui.pages;
 
+import com.codeborne.selenide.SelenideElement;
 import io.qameta.allure.Step;
 
 import static com.codeborne.selenide.Condition.text;
+import static com.codeborne.selenide.Selectors.byText;
+import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.webdriver;
 import static com.codeborne.selenide.WebDriverConditions.url;
 import static ru.tutu.tests.ui.TestData.*;
 
 public class AboutCompanyPage {
+
+    public static SelenideElement
+            infoAboutCompanySelector = $(byText("О компании")),
+            textAboutCompanySelector = $("[field='tn_text_1562852752675']"),
+            textAboutCompanyTwoSelector = $("[field='tn_text_1568892305541']");
 
     @Step("Перейти в раздел 'О компании'")
     public void openPageAboutCompany() {
@@ -24,5 +32,5 @@ public class AboutCompanyPage {
         textAboutCompanySelector.shouldHave(text(textAboutCompany));
         textAboutCompanyTwoSelector.shouldHave(text(textAboutCompanyTwo));
     }
-
 }
+

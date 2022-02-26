@@ -1,15 +1,16 @@
-package config;
+package ru.tutu.config;
 
 import org.aeonbits.owner.Config;
 
 @Config.LoadPolicy(Config.LoadType.MERGE)
 @Config.Sources({
         "system:properties",
-        "classpath:config/${typeEnv}.properties"
-//        "classpath:config/locale.properties",
-//        "classpath:config/remote.properties"
+        "classpath:configs/${typeEnv}.properties"
 })
-
+/**
+ * Класс для настройки конфигурации
+ * [typeEnv] принимает значения local или remote, в зависимости от вариантов запуска тестов: локально или удалённо.
+ */
 public interface ProjectConfig extends Config {
 
     String selenoidUrl();

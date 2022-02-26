@@ -11,7 +11,7 @@ import ru.tutu.tests.ui.pages.HomePage;
 import ru.tutu.tests.ui.pages.SearchPageTrainTickets;
 
 import static com.codeborne.selenide.Selenide.open;
-import static config.WebDriverProvider.webConfiguration;
+import static ru.tutu.config.WebDriverConfig.webConfiguration;
 import static io.qameta.allure.Allure.step;
 
 public class TestBase {
@@ -22,26 +22,21 @@ public class TestBase {
 
     @BeforeAll
     static void setup() {
-
         SelenideLogger.addListener("AllureSelenide", new AllureSelenide());
         webConfiguration();
-
     }
 
     @BeforeEach
     void openMainPage() {
-
-        step("Открыть главную страницу сайта Tutu.ru", () ->
-                open("https://www.tutu.ru/"));
+        step("Открыть главную страницу сайта Tutu.ru", () -> open("https://www.tutu.ru/"));
     }
 
     @AfterEach
     public void tearDown() {
-
         Attach.screenshotAs("Last screenshot");
         Attach.pageSource();
         Attach.browserConsoleLogs();
         Attach.addVideo();
     }
-
 }
+

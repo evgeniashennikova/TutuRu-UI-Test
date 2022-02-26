@@ -14,9 +14,7 @@ public class TutuTests extends TestBase {
     @Severity(value = SeverityLevel.NORMAL)
     @DisplayName("Проверка текста заголовка на главной странице")
     void titleTextTest() {
-
         homePageSteps.checkTitle();
-
     }
 
     @Test
@@ -25,10 +23,8 @@ public class TutuTests extends TestBase {
     @Severity(value = SeverityLevel.CRITICAL)
     @DisplayName("Проверка наличия логотипа и слогана")
     void checkLogoTest() {
-
         homePageSteps.checkLogo();
         homePageSteps.checkSlogan();
-
     }
 
     @Test
@@ -37,7 +33,6 @@ public class TutuTests extends TestBase {
     @Severity(value = SeverityLevel.CRITICAL)
     @DisplayName("Проверка наличие табов поиска")
     void checkTabsTest() {
-
         homePageSteps.checkTabAirlineTickets();
         homePageSteps.checkTabTrainTickets();
         homePageSteps.checkTabBusTickets();
@@ -47,7 +42,6 @@ public class TutuTests extends TestBase {
         homePageSteps.checkTabHotels();
         homePageSteps.checkTabBusinessTravel();
         homePageSteps.checkTabAeroexpress();
-
     }
 
     @Test
@@ -56,13 +50,11 @@ public class TutuTests extends TestBase {
     @Severity(value = SeverityLevel.CRITICAL)
     @DisplayName("Проверка функции поиска ж/д билетов на сайте")
     void searchTest() {
-
         searchPageTrainTicketsSteps.openPageTrainTickets();
         searchPageTrainTicketsSteps.fillingFieldFrom();
         searchPageTrainTicketsSteps.fillingFieldTo();
         searchPageTrainTicketsSteps.fillingFieldTravelDate();
         searchPageTrainTicketsSteps.checkSearchResults();
-
     }
 
     @Test
@@ -71,10 +63,9 @@ public class TutuTests extends TestBase {
     @Severity(value = SeverityLevel.NORMAL)
     @DisplayName("Footer содержит раздел 'О компании'")
     void checkInfoCompanyTest() {
-
         aboutCompanyPageSteps.openPageAboutCompany();
         aboutCompanyPageSteps.checkUrlPageAboutCompany();
         aboutCompanyPageSteps.checkInfoAboutCompany();
-
     }
 }
+
