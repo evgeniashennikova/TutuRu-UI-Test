@@ -8,7 +8,8 @@ import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.title;
-import static ru.tutu.tests.ui.TestData.*;
+import static ru.tutu.tests.ui.TestData.expectedTitle;
+import static ru.tutu.tests.ui.TestData.textSlogan;
 
 public class HomePage {
 
@@ -27,10 +28,8 @@ public class HomePage {
 
     @Step("Проверка заголовка страницы")
     public void checkTitle() {
-
         String actualTitle = title();
         Assertions.assertEquals(expectedTitle, actualTitle);
-
     }
 
     @Step("Проверка наличия логотипа на главной странице")
@@ -89,3 +88,4 @@ public class HomePage {
     }
 
 }
+
