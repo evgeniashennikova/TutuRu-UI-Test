@@ -139,7 +139,9 @@
   
 </details>  
 
-### <img src="https://user-images.githubusercontent.com/93325839/154862600-5b1a419e-2a5d-407a-ad46-440ff0fb30de.png"  height="30"/> Видео прохождения тестов в Selenoid  
+### <img src="https://user-images.githubusercontent.com/93325839/154862600-5b1a419e-2a5d-407a-ad46-440ff0fb30de.png"  height="30"/> Видео прохождения тестов в Selenoid   
 
-https://user-images.githubusercontent.com/93325839/154869810-73991890-49b9-4c75-b8d7-7aa1bd013469.mp4  
+https://user-images.githubusercontent.com/93325839/155042180-70e21dda-0b0b-469d-8e1f-48a280d3602c.mp4
+
+
 
